@@ -14,32 +14,24 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
-        //A few ways of creating strings:
-        NSString *str = @"One";
+        //Primitive variables are not pointers.
+        int a = 1;
+        float b = 2.5;
+        char c = 'A';
         
-        //Below is a valid use but throws a warning since its a redundant use
-        NSString *strTwo = [[NSString alloc] initWithString:@"Two"];
-        
-        //Some more valid uses of strings.
-        NSString *strThree = @"Three";
-        int len = [strThree length];
-        
-        strThree = [[NSString alloc] initWithString:@"Three"];
-        len = [strThree length];
-        
-        //Standard use for string
-        NSString *strZero = @"Zero";
-        
-        [items addObject:str];
-        [items addObject:strTwo];
-        [items addObject:strThree];
-        
-        [items insertObject:strZero atIndex:0];
-        
-        for (int i = 0; i < [items count]; i++) {
-            NSLog(@"%@", [items objectAtIndex:i]);
-        }
-        
+//        
+//        [items addObject:@"One"];
+//        [items addObject:@"Two"];
+//        [items addObject:@"Three"];
+//        
+//        [items insertObject:@"Zero" atIndex:0];
+//        
+//        for (int i = 0; i < [items count]; i++) {
+//            NSLog(@"%@", [items objectAtIndex:i]);
+//        }
+//
+        //Formatted Output
+        NSLog(@"Integer: %d Float %f Char: %c", a, b, c);
         items = nil;
     }
     return 0;
