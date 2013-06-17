@@ -20,11 +20,21 @@ int main(int argc, const char * argv[])
         //Below is a valid use but throws a warning since its a redundant use
         NSString *strTwo = [[NSString alloc] initWithString:@"Two"];
         
+        //Some more valid uses of strings.
+        NSString *strThree = @"Three";
+        int len = [strThree length];
+        
+        strThree = [[NSString alloc] initWithString:@"Three"];
+        len = [strThree length];
+        
+        //Standard use for string
+        NSString *strZero = @"Zero";
+        
         [items addObject:str];
         [items addObject:strTwo];
-        [items addObject:@"Three"];
+        [items addObject:strThree];
         
-        [items insertObject:@"Zero" atIndex:0];
+        [items insertObject:strZero atIndex:0];
         
         for (int i = 0; i < [items count]; i++) {
             NSLog(@"%@", [items objectAtIndex:i]);
