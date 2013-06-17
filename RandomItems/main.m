@@ -14,6 +14,8 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
+        //Three ways of creating strings:
+        
         [items addObject:@"One"];
         [items addObject:@"Two"];
         [items addObject:@"Three"];
