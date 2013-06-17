@@ -14,24 +14,20 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
-        //Primitive variables are not pointers.
-        int a = 1;
-        float b = 2.5;
-        char c = 'A';
+        [items addObject:@"One"];
+        [items addObject:@"Two"];
+        [items addObject:@"Three"];
         
-//        
-//        [items addObject:@"One"];
-//        [items addObject:@"Two"];
-//        [items addObject:@"Three"];
-//        
-//        [items insertObject:@"Zero" atIndex:0];
-//        
-//        for (int i = 0; i < [items count]; i++) {
-//            NSLog(@"%@", [items objectAtIndex:i]);
-//        }
-//
-        //Formatted Output
-        NSLog(@"Integer: %d Float %f Char: %c", a, b, c);
+        [items insertObject:@"Zero" atIndex:0];
+        
+        for (int i = 0; i < [items count]; i++) {
+            NSLog(@"%@", [items objectAtIndex:i]);
+        }
+        
+        int numberOfObjects = [items count];
+        
+        NSLog(@"Number of objects in array items: %d", numberOfObjects);
+        
         items = nil;
     }
     return 0;
