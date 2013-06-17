@@ -34,6 +34,13 @@ int main(int argc, const char * argv[])
 //        
 //        NSLog(@"%d", numberOfObjects);
         
+        //Retrieves pointer to the object at index 3.
+        NSString *obj = [items objectAtIndex: 3];
+        //Will print the description of the object at index 3, which is simply string "Three".
+        NSLog(@"%@", obj);
+        
+        //Will print the description of the array items. Will print out the name of the array and the elements.
+        NSLog(@"%@", items);
         items = nil;
     }
     return 0;
