@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E91A90E176FD6C200E964D8 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E91A90D176FD6C200E964D8 /* BNRItem.m */; };
 		4EA5BE38176EB1B400E74768 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA5BE37176EB1B400E74768 /* Foundation.framework */; };
 		4EA5BE3B176EB1B400E74768 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA5BE3A176EB1B400E74768 /* main.m */; };
 		4EA5BE3F176EB1B400E74768 /* RandomItems.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4EA5BE3E176EB1B400E74768 /* RandomItems.1 */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E91A90C176FD6C200E964D8 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BNRItem.h; path = ../BNRItem.h; sourceTree = "<group>"; };
+		4E91A90D176FD6C200E964D8 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BNRItem.m; path = ../BNRItem.m; sourceTree = "<group>"; };
 		4EA5BE34176EB1B400E74768 /* RandomItems */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RandomItems; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EA5BE37176EB1B400E74768 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4EA5BE3A176EB1B400E74768 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 		4EA5BE39176EB1B400E74768 /* RandomItems */ = {
 			isa = PBXGroup;
 			children = (
+				4E91A90C176FD6C200E964D8 /* BNRItem.h */,
+				4E91A90D176FD6C200E964D8 /* BNRItem.m */,
 				4EA5BE3A176EB1B400E74768 /* main.m */,
 				4EA5BE3E176EB1B400E74768 /* RandomItems.1 */,
 				4EA5BE3C176EB1B400E74768 /* Supporting Files */,
@@ -140,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4EA5BE3B176EB1B400E74768 /* main.m in Sources */,
+				4E91A90E176FD6C200E964D8 /* BNRItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +248,7 @@
 				4EA5BE44176EB1B400E74768 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
