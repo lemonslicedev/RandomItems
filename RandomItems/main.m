@@ -14,10 +14,14 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
-        //Three ways of creating strings:
+        //A few ways of creating strings:
+        NSString *str = @"One";
         
-        [items addObject:@"One"];
-        [items addObject:@"Two"];
+        //Below is a valid use but throws a warning since its a redundant use
+        NSString *strTwo = [[NSString alloc] initWithString:@"Two"];
+        
+        [items addObject:str];
+        [items addObject:strTwo];
         [items addObject:@"Three"];
         
         [items insertObject:@"Zero" atIndex:0];
