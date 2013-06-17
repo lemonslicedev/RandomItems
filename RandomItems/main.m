@@ -18,15 +18,21 @@ int main(int argc, const char * argv[])
         [items addObject:@"Two"];
         [items addObject:@"Three"];
         
+        //Adding this object at index 0 will shift all the elements
         [items insertObject:@"Zero" atIndex:0];
+        
+        //You cannot add nil to an array, if you need to add holes use object NSNull
+        [items addObject:[NSNull null]];
+        //Adding object at index two will replace string "Two" with nothing
+        [items replaceObjectAtIndex:2 withObject:[NSNull null]];
         
         for (int i = 0; i < [items count]; i++) {
             NSLog(@"%@", [items objectAtIndex:i]);
         }
         
-        int numberOfObjects = [items count];
-        
-        NSLog(@"Number of objects in array items: %d", numberOfObjects);
+//        int numberOfObjects = [items count];
+//        
+//        NSLog(@"%d", numberOfObjects);
         
         items = nil;
     }
