@@ -17,10 +17,6 @@ int main(int argc, const char * argv[])
         
         BNRItem *p = [[BNRItem alloc] init];
         
-        [p setItemName:@"Silver Macbook Pro"];
-        [p setSerialNumber:@"A1S2D"];
-        [p setValueInDollars:1600];
-        
         NSLog(@"%@", p);
         
         items = nil;

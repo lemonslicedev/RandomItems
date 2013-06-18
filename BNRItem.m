@@ -10,6 +10,25 @@
 
 @implementation BNRItem
 
+- (id)init
+{
+    return [self initWithItemName:@"Blank Item" valueInDollars:0 serialNumber:@""];
+}
+
+- (id)initWithItemName: (NSString *)name valueInDollars: (int)value serialNumber: (NSString *)sNumber
+{
+    self = [super init];
+    
+    if (self) {
+        [self setItemName:name];
+        [self setSerialNumber:sNumber];
+        [self setValueInDollars:value];
+        dateCreated = [[NSDate alloc] init];
+    }
+    
+    return self;
+}
+
 - (void)setItemName: (NSString *)name
 {
     itemName = name;
