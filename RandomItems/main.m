@@ -14,29 +14,20 @@ int main(int argc, const char * argv[])
 {
     
     @autoreleasepool {
-        //Stuff In My Room
-        BNRItem *blueFuton = [[BNRItem alloc] initWithItemName:@"Blue Futon" valueInDollars:100 serialNumber:@"A1B2C"];
+        NSMutableArray *items = [[NSMutableArray alloc] init];
         
-        BNRItem *silverMac = [[BNRItem alloc] initWithItemName:@"Silver MacBook Pro" valueInDollars:1500 serialNumber:@"L337"];
+        BNRItem *backpack = [[BNRItem alloc] init];
+        [backpack setItemName:@"Backpack"];
+        [items addObject:backpack];
         
-        BNRContainer *stuffInMyRoom = [[BNRContainer alloc] initWithContainerName:@"Stuff In My Room" subItem:blueFuton];
+        BNRItem *calculator = [[BNRItem alloc] init];
+        [calculator setItemName:@"Calculator"];
+        [items addObject:calculator];
         
-        [stuffInMyRoom addItem:silverMac];
+        [backpack setContainedItem:calculator];
         
-        //Stuff In My Living Room
-        BNRItem *bigTv = [[BNRItem alloc] initWithItemName:@"Big TV" valueInDollars:2000 serialNumber:@"Q1W2E"];
-        
-        BNRItem *whiteCouch = [[BNRItem alloc] initWithItemName:@"White Comfy Couch" valueInDollars:5000 serialNumber:@"A1S2D"];
-        
-        NSMutableArray *items = [[NSMutableArray alloc] initWithObjects:bigTv, whiteCouch, nil];
-        
-        BNRContainer *stuffInMyLivingRoom = [[BNRContainer alloc] initWithContainerName:@"Stuff In My Living Room" subItems:items];
-        
-        NSMutableArray *stuff = [[NSMutableArray alloc] initWithObjects:stuffInMyRoom, stuffInMyLivingRoom, nil];
-        
-        BNRContainer *stuffInMyHouse = [[BNRContainer alloc] initWithContainerName:@"Stuff In My House" subItems:stuff];
-        
-        NSLog(@"%@", stuffInMyHouse);
+        NSLog(@"Setting items to nil");
+        items = nil;
     }
     return 0;
 }
