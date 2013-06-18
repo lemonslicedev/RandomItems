@@ -10,6 +10,8 @@
 
 @implementation BNRItem
 
+@synthesize itemName, serialNumber, valueInDollars, dateCreated, containedItem, container;
+
 + (id)randomItem
 {
     NSArray *randomAdjectiveList = [NSArray arrayWithObjects:@"Fluffy", @"Rusty", @"Shiny", nil];
@@ -33,38 +35,6 @@
     BNRItem *newItem = [[self alloc] initWithItemName:randomName valueInDollars:randomValue serialNumber:randomSerialNumber];
     
     return newItem;
-}
-
-- (void)setItemName: (NSString *)name
-{
-    itemName = name;
-}
-- (NSString *)itemName
-{
-    return itemName;
-}
-
-- (void)setSerialNumber: (NSString *)sNumber
-{
-    serialNumber = sNumber;
-}
-- (NSString *)serialNumber
-{
-    return serialNumber;
-}
-
-- (void)setValueInDollars: (int)i
-{
-    valueInDollars = i;
-}
-- (int)valueInDollars
-{
-    return valueInDollars;
-}
-
-- (NSDate *)dateCreated
-{
-    return dateCreated;
 }
 
 - (id)init
@@ -91,23 +61,10 @@
     return [self initWithItemName:name valueInDollars:0 serialNumber:sNumber];
 }
 
-- (void)setContainedItem: (BNRItem *)i
+- (void)setContainedItem:(BNRItem *)i
 {
     containedItem = i;
     [i setContainer:self];
-}
-- (BNRItem *)containedItem
-{
-    return containedItem;
-}
-
-- (void)setContainer: (BNRItem *)i
-{
-    container = i;
-}
-- (BNRItem *)container
-{
-    return container;
 }
 
 - (NSString *)description
