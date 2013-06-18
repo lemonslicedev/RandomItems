@@ -24,6 +24,10 @@ int main(int argc, const char * argv[])
             NSLog(@"%@", item);
         }
         
+        BNRItem *itemNoValue = [[BNRItem alloc] initWithItemName:@"No Value Item" serialNumber:@"Q1W2E"];
+        
+        NSLog(@"%@", itemNoValue);
+        
         items = nil;
     }
     return 0;

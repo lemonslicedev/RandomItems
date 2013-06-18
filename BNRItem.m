@@ -86,6 +86,11 @@
     return self;
 }
 
+- (id)initWithItemName: (NSString *)name serialNumber: (NSString *)sNumber
+{
+    return [self initWithItemName:name valueInDollars:0 serialNumber:sNumber];
+}
+
 - (NSString *)description
 {
     NSString *descriptionStr = [[NSString alloc] initWithFormat:@"%@ (%@): Worth $%d, recorded on %@", itemName, serialNumber, valueInDollars, dateCreated];
