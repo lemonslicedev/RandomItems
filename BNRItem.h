@@ -26,4 +26,6 @@
 - (int)valueInDollars;
 
 - (NSDate *)dateCreated;
+
+- (NSString *)description;
 @end

@@ -21,7 +21,7 @@ int main(int argc, const char * argv[])
         [p setSerialNumber:@"A1S2D"];
         [p setValueInDollars:1600];
         
-        NSLog(@"%@ %@ %@ %d", [p itemName], [p dateCreated], [p serialNumber], [p valueInDollars]);
+        NSLog(@"%@", p);
         
         items = nil;
     }
