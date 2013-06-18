@@ -16,6 +16,11 @@ int main(int argc, const char * argv[])
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
         BNRItem *p = [[BNRItem alloc] init];
+        
+        [p setItemName:@"Silver Macbook Pro"];
+        [p setSerialNumber:@"A1S2D"];
+        [p setValueInDollars:1600];
+        
         NSLog(@"%@ %@ %@ %d", [p itemName], [p dateCreated], [p serialNumber], [p valueInDollars]);
         
         items = nil;
