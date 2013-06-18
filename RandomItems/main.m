@@ -15,7 +15,7 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
-        BNRItem *p = [[BNRItem alloc] init];
+        BNRItem *p = [[BNRItem alloc] initWithItemName:@"Silver Macbook Pro" valueInDollars:1600 serialNumber:@"A1S2D"];
         
         NSLog(@"%@", p);
         
