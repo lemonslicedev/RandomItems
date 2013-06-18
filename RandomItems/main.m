@@ -15,9 +15,14 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         NSMutableArray *items = [[NSMutableArray alloc] init];
         
-        BNRItem *p = [[BNRItem alloc] initWithItemName:@"Silver Macbook Pro" valueInDollars:1600 serialNumber:@"A1S2D"];
+        for (int i = 0; i < 10; i++) {
+            BNRItem *p = [BNRItem randomItem];
+            [items addObject:p];
+        }
         
-        NSLog(@"%@", p);
+        for (int i = 0; i < [items count]; i++) {
+            NSLog(@"%@", [items objectAtIndex:i]);
+        }
         
         items = nil;
     }
