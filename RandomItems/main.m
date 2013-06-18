@@ -8,27 +8,35 @@
 
 #import <Foundation/Foundation.h>
 #import "BNRItem.h"
+#import "BNRContainer.h"
 
 int main(int argc, const char * argv[])
 {
-
+    
     @autoreleasepool {
-        NSMutableArray *items = [[NSMutableArray alloc] init];
+        //Stuff In My Room
+        BNRItem *blueFuton = [[BNRItem alloc] initWithItemName:@"Blue Futon" valueInDollars:100 serialNumber:@"A1B2C"];
         
-        for (int i = 0; i < 10; i++) {
-            BNRItem *p = [BNRItem randomItem];
-            [items addObject:p];
-        }
+        BNRItem *silverMac = [[BNRItem alloc] initWithItemName:@"Silver MacBook Pro" valueInDollars:1500 serialNumber:@"L337"];
         
-        for (BNRItem *item in items) {
-            NSLog(@"%@", item);
-        }
+        BNRContainer *stuffInMyRoom = [[BNRContainer alloc] initWithContainerName:@"Stuff In My Room" subItem:blueFuton];
         
-        BNRItem *itemNoValue = [[BNRItem alloc] initWithItemName:@"No Value Item" serialNumber:@"Q1W2E"];
+        [stuffInMyRoom addItem:silverMac];
         
-        NSLog(@"%@", itemNoValue);
+        //Stuff In My Living Room
+        BNRItem *bigTv = [[BNRItem alloc] initWithItemName:@"Big TV" valueInDollars:2000 serialNumber:@"Q1W2E"];
         
-        items = nil;
+        BNRItem *whiteCouch = [[BNRItem alloc] initWithItemName:@"White Comfy Couch" valueInDollars:5000 serialNumber:@"A1S2D"];
+        
+        NSMutableArray *items = [[NSMutableArray alloc] initWithObjects:bigTv, whiteCouch, nil];
+        
+        BNRContainer *stuffInMyLivingRoom = [[BNRContainer alloc] initWithContainerName:@"Stuff In My Living Room" subItems:items];
+        
+        NSMutableArray *stuff = [[NSMutableArray alloc] initWithObjects:stuffInMyRoom, stuffInMyLivingRoom, nil];
+        
+        BNRContainer *stuffInMyHouse = [[BNRContainer alloc] initWithContainerName:@"Stuff In My House" subItems:stuff];
+        
+        NSLog(@"%@", stuffInMyHouse);
     }
     return 0;
 }
