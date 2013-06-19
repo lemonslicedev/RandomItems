@@ -10,6 +10,8 @@
 
 @implementation BNRContainer
 
+@synthesize itemName, serialNumber, valueInDollars, dateCreated, containedItem, container;
+
 - (NSString *)description
 {
     NSString *descriptionString = [[NSString alloc] initWithFormat:@"Container Name: %@, Sub Items: %@, Total Container Value: %d", containerName, subItems, valueInDollars];
